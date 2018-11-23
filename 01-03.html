@@ -1,0 +1,19 @@
+<meta charset="utf8">
+<fieldset>
+    <input type='checkbox' disabled value='java'> JAVA
+    <input type='checkbox' value='html'> HTML
+    <input type='checkbox' value='js'> JavaScript
+    <input type='checkbox' value='jquery'> jQuery
+</fieldset>
+<input type='button' value='확인' onclick='check()'>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+ function check() {
+     var elements = $('input:checked');
+     for(var i = 0; i < elements.length; i++) {
+         var elem = elements[i];
+         console.log('체크된 값 : ' + $(elem).val());
+     }
+ }
+
+</script>
