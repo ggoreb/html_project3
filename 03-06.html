@@ -1,0 +1,17 @@
+<meta charset="utf8">
+
+<ul>
+    <li>1번</li>
+</ul>
+
+<input type="button" value="추가" onclick="add()">
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $('li').click(function() {
+        //$(this).hide(3000)
+    })
+
+    function add() {
+        $('li').fadeToggle(1000)
+    }
+</script>

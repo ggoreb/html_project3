@@ -1,0 +1,20 @@
+<meta charset="utf8">
+<style>
+ #result {
+ color: red; font-weight: bold;
+ margin-left: 20px;
+ }
+
+</style>
+ID : <input type='text' name='user_id'>
+<span id='result'></span>
+<br>
+<input type='button' value='중복확인' onclick='run()'>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+ function run() {
+    var user_id = $('input[name=user_id]').val()
+    $('#result').text(user_id + '사용가능')
+ }
+
+</script>

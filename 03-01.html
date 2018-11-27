@@ -1,0 +1,25 @@
+<meta charset="utf8">
+<fieldset>
+    <legend>취미</legend>
+    <input type='checkbox' name='hobby' value='1'> 수영
+    <input type='checkbox' name='hobby' value='2'> 당구
+    <input type='checkbox' name='hobby' value='3'> 축구
+    <input type='checkbox' name='hobby' value='4'> 배드민턴
+    <input type='button' value='확인' onclick='check()'>
+</fieldset>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+ function check() {
+    var box = $('input[type=checkbox]:checked')
+    for(var i = 0; i < box.length; i++) {
+        var b = box[i]
+    }
+
+    $('input:checkbox:checked').each(function(idx, item) {
+        // 선택된 요소만 동작
+        $(this).val()
+        $(item).parent().next()
+    })
+ }
+
+</script>

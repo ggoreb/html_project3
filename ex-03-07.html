@@ -1,0 +1,23 @@
+<meta charset="utf8">
+<div class="control">
+    <input type="button" value="추가" onclick="addFile()">
+    <input type="button" value="삭제" onclick="removeFile()">
+</div>
+<div class="attachment"><input type="file"></div>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function addFile() {
+        var file = $('input:file:last').clone()
+        $('div:last').append(file)
+//        $(file).appendTo($('div:last'))
+
+    /*
+        tag = '<input type="file">'
+        $('div:last').html( $('div:last').html() + tag )
+    */
+    }
+    function removeFile() {
+        $('input:file:last').remove()
+    }
+
+</script>

@@ -1,0 +1,23 @@
+<meta charset="utf8">
+<ul>
+ <li data-role='move'><span>item 1</span></li>
+ <li data-role='move'><b>item 2</b></li>
+ <li><b>item 3</b></li>
+ <li><span>item 4</span></li>
+ <li data-role='move'><b>item 5</b></li>
+</ul>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $('li[data-role=move]').filter(function() {
+        var b = $('b', this)
+        if(b.length > 0) {
+            $(this).css('background', 'yellow')
+        }
+    })
+</script>
+
+
+
+
+
+

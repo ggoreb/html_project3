@@ -1,0 +1,23 @@
+<meta charset="utf8">
+<ul>
+ <li><span>item 1</span> <span>item 1-1</span></li>
+ <li><span>item 2</span></li>
+ <li><span>item 3</span> <span>item 3-1</span></li>
+ <li><span>item 4</span> <span>item 4-1</span></li>
+ <li><span>item 5</span></li>
+</ul>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $('li').filter(function() {
+        var span = $('span', this)
+        if(span.length >= 2) {
+            $(this).css('background', 'yellow')
+        }
+    })
+</script>
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<meta charset="utf8">
+<style>
+    div {
+        width:30px; height:30px;
+        position:relative;
+        left:0; top:0;
+        border-radius:15px;
+        background:yellow;
+    }
+</style>
+<div></div>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    isClick = false
+    $('div').mousedown(function() {
+        isClick = true
+    })
+    $('div').mousemove(function(e) {
+        if(isClick) {
+            mouseX = e.pageX
+            mouseY = e.pageY
+            $(this).css({'left':mouseX, 'top':mouseY})
+        }
+    })
+    $('div').mouseup(function() {
+        isClick = false
+    })
+
+</script>
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<ul>
+    <li><span>item 1</span> <span>item 1-1</span></li>
+    <li><span>item 2</span></li>
+    <li><span>item 3</span></li>
+    <li><span>item 4</span> <span>item 4-1</span></li>
+    <li><span>item 5</span></li>
+</ul>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $('li').filter(function(abc) {
+        console.log(abc)
+        // 5번 동작
+       // console.log($('span', this).length)
+        if($('span', this).length == 1) {
+            $(this).css('background', 'yellow')
+        }
+    })
+/*
+    var lis = $('li')
+    console.log(lis.length)
+    var spans = $('span')
+    console.log(spans.length)
+*/
+</script>

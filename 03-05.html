@@ -1,0 +1,54 @@
+<meta charset="utf8">
+<table border='1'>
+    <tr>
+        <th>순번</th>
+        <th>혈액형</th>
+        <th>지역</th>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>1</td>
+        <td>A</td>
+        <td>서울</td>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>2</td>
+        <td>B</td>
+        <td>부산</td>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>3</td>
+        <td>O</td>
+        <td>제주</td>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>4</td>
+        <td>AB</td>
+        <td>전남</td>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>5</td>
+        <td>A</td>
+        <td>강원</td>
+    </tr>
+    <tr onclick='run(this)'>
+        <td>6</td>
+        <td>AB</td>
+        <td>대전</td>
+    </tr>
+</table>
+<input type="button" value="추가" onclick="add()">
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+ function add() {
+    tag = '<tr><td>7</td><td>O</td><td>광주</td></tr>';
+    $('table').html($('table').html() + tag)
+ }
+
+ function run(obj) {
+    isOk = confirm('삭제하시겠습니까?')
+    if(isOk) {
+        $(obj).remove();
+    }
+ }
+
+</script>
